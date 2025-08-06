@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://moyuanhua.github.io',
+  // 使用根路径作为 baseUrl
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // 注意：当使用根路径 '/' 作为 baseUrl 时，
+  // 你的仓库名称应该是 moyuanhua.github.io
+  organizationName: 'moyuanhua', // Usually your GitHub org/user name.
+  projectName: 'moyuanhua.github.io', // 应该是这个主域名仓库
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
