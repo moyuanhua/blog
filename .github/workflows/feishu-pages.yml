@@ -8,6 +8,16 @@ permissions:
   pages: write
   id-token: write
 
+# 配置要部署到的环境
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# 默认为部署到 github pages 环境
+environment:
+  name: github-pages
+  url: ${{ steps.deployment.outputs.page_url }}
+
 jobs:
   feishu-pages:
     name: Feishu Pages Export
@@ -32,6 +42,9 @@ jobs:
           yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # 明确指定启用 GitHub Pages
+          enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
